@@ -49,7 +49,7 @@ public class ServerUI extends JLabel implements DataListener {
     @Override
     public Dimension getPreferredSize() {
         if (image == null) {
-            return new Dimension(960, 720); // init window size
+            return new Dimension(640, 480); // init window size
         } else {
             return new Dimension(image.getWidth(null), image.getHeight(null));
         }

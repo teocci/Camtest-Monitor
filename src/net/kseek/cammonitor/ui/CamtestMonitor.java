@@ -5,12 +5,12 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-
-
 /**
  * Created by teocci on 6/20/16.
  */
 public class CamtestMonitor extends JFrame{
+
+    final static int gapSize = 0;
     GridLayout gl = new GridLayout(2, 3);
 
     public CamtestMonitor(String name) {
@@ -23,9 +23,20 @@ public class CamtestMonitor extends JFrame{
         jp.setLayout(gl);
 
         //Set up components preferred size
-        jp.add(new ServerUI(8888));
         jp.add(new ServerUI(8880));
-        jp.setPreferredSize(new Dimension(1920, 1080));
+        jp.add(new ServerUI(8881));
+        jp.add(new ServerUI(8882));
+        jp.add(new ServerUI(8883));
+        jp.add(new ServerUI(8884));
+        jp.add(new ServerUI(8885));
+        jp.setPreferredSize(new Dimension(1600, 900));
+
+        //Set up the horizontal gap value
+        gl.setHgap(gapSize);
+        //Set up the vertical gap value
+        gl.setVgap(gapSize);
+        //Set up the layout of the buttons
+        gl.layoutContainer(jp);
 
         pane.add(jp, BorderLayout.NORTH);
         pane.add(new JSeparator(), BorderLayout.SOUTH);
