@@ -24,11 +24,11 @@ public class CamtestMonitor extends JFrame{
 
         //Set up components preferred size
         jp.add(new ServerUI(8880));
-        jp.add(new ServerUI(8881));
-        jp.add(new ServerUI(8882));
-        jp.add(new ServerUI(8883));
-        jp.add(new ServerUI(8884));
-        jp.add(new ServerUI(8885));
+        jp.add(new ServerUI(8891));
+        jp.add(new ServerUI(8892));
+        jp.add(new ServerUI(8893));
+        jp.add(new ServerUI(8894));
+        jp.add(new ServerUI(8895));
         jp.setPreferredSize(new Dimension(1600, 900));
 
         //Set up the horizontal gap value

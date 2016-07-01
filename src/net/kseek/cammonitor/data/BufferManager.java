@@ -78,7 +78,7 @@ public class BufferManager extends Thread {
     	super.run();
     	
     	while (!Thread.currentThread().isInterrupted()) {
-    		byte[] data = null;
+    		byte[] data;
     		synchronized (YUVQueue) {
     			data = YUVQueue.poll();
     			
@@ -86,6 +86,8 @@ public class BufferManager extends Thread {
     				long t = System.currentTimeMillis();
     				BufferedImage bufferedImage;
     				int[] rgbArray = Utils.convertYUVtoRGB(data, width, height);
+
+					System.out.println("Width x Height --> " + width + "x" + height);
     				bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_USHORT_565_RGB);
     				bufferedImage.setRGB(0, 0, width, height, rgbArray, 0, width);
     				

@@ -12,6 +12,7 @@ public class ImageBuffer{
     public ImageBuffer(int frameLgth, int w, int h) {
         byteArrayOutputStream = new ByteArrayOutputStream();
         frameLength = frameLgth;
+        //System.out.println("ImageBuffer: Width x Height --> " + w + "x" + h);
     }
     
     public int fillBuffer(byte[] data, int off, int len, LinkedList<byte[]> YUVQueue) {
